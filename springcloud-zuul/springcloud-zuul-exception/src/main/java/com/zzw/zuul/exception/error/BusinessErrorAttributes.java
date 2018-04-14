@@ -6,8 +6,8 @@
  */
 package com.zzw.zuul.exception.error;
 
-import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
-import org.springframework.web.context.request.WebRequest;
+import org.springframework.boot.autoconfigure.web.DefaultErrorAttributes;
+import org.springframework.web.context.request.RequestAttributes;
 
 import java.util.Map;
 
@@ -22,9 +22,9 @@ import java.util.Map;
 public class BusinessErrorAttributes extends DefaultErrorAttributes {
 
     @Override
-    public Map<String, Object> getErrorAttributes(WebRequest webRequest, boolean includeStackTrace) {
-        Map<String, Object> result = super.getErrorAttributes(webRequest, includeStackTrace);
+    public Map<String, Object> getErrorAttributes(RequestAttributes requestAttributes, boolean includeStackTrace) {
+        Map<String, Object> result = super.getErrorAttributes(requestAttributes, includeStackTrace);
         result.remove("exception");
-        return super.getErrorAttributes(webRequest, includeStackTrace);
+        return result;
     }
 }

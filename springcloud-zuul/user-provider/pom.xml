@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zzw</groupId>
-    <artifactId>springcloud-zuul-exception</artifactId>
+    <artifactId>user-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-zuul-exception</name>
-    <description>zuul exception</description>
+    <name>user-provider</name>
+    <description>user provider</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -27,8 +27,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -63,5 +63,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
